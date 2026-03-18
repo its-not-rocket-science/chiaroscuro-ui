@@ -1,12 +1,50 @@
 # chiaroscuro-ui
-Light/Dark Harmony for Modern Web Apps
 
-A high-performance, accessibility-first UI library built with cutting-edge CSS, designed to work seamlessly across React, Angular, Vue, Svelte, and vanilla Web Components. Prioritizes GPU-efficient rendering, adaptive contrast, and zero-runtime overhead through:
+Light/Dark Harmony for Modern Web Apps.
 
-✨ Auto-Enforced Accessibility
-🚀 Container Query-Driven Responsiveness
-🎨 Three Master Themes: Tenebrism (high contrast), Sfumato (soft blend), Umbra (deep shadows)
-🌓 Dynamic Light/Dark Mode with CSS Color Level 4 (OKLCH)
-📦 2.8kb Core (CSS) + 1.2kb Framework Adapters
+Chiaroscuro UI is now a lightweight starter for a design-system playground: a zero-build, zero-runtime CSS foundation with a small interactive demo you can open directly in the browser or serve locally.
 
-Well, that's the intention, at least. Let's see how far I get!
+## What is included
+
+- **Three atmospheric themes**: `tenebrism`, `sfumato`, and `umbra`.
+- **Light and dark mode support** using semantic design tokens.
+- **Starter primitives** for surfaces, cards, buttons, pills, form fields, and status meters.
+- **A token preview panel** that reads CSS custom properties live from the page.
+- **No framework requirement** so the design language can be ported into React, Vue, Angular, Svelte, or Web Components later.
+
+## Project structure
+
+```text
+.
+├── index.html            # Demo page / playground
+├── package.json          # Small helper scripts
+└── src
+    ├── chiaroscuro.css   # Theme tokens and component primitives
+    └── playground.js     # Theme + mode interactions and token swatches
+```
+
+## Getting started
+
+### Option 1: open it directly
+
+Open `index.html` in a browser to inspect the starter system.
+
+### Option 2: serve locally
+
+```bash
+npm run start
+```
+
+This starts a static server on <http://localhost:4173> using Python's built-in HTTP server.
+
+## Available scripts
+
+- `npm run start` — serves the demo locally.
+- `npm run check` — syntax-checks `src/playground.js` with Node.
+
+## Next ideas
+
+- Split the CSS primitives into a distributable `core.css` package.
+- Add framework adapters and examples.
+- Add documentation pages for tokens, components, and accessibility guidance.
+- Introduce visual regression snapshots once a proper app shell is in place.

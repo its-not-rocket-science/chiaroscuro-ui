@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="tenebrism">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chiaroscuro UI is a zero-runtime CSS starter focused on contrast, atmosphere, and adaptive theming."
+    />
+    <title>Chiaroscuro UI</title>
+    <link rel="stylesheet" href="./src/chiaroscuro.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero surface">
+        <div>
+          <p class="eyebrow">Light/Dark Harmony</p>
+          <h1>Chiaroscuro UI</h1>
+          <p class="lede">
+            A starter design system for moody, high-contrast interfaces with zero-runtime CSS,
+            semantic tokens, and a built-in accessibility mindset.
+          </p>
+        </div>
+
+        <div class="hero-controls">
+          <label class="control-stack">
+            <span>Theme</span>
+            <select id="theme-picker" class="input">
+              <option value="tenebrism">Tenebrism</option>
+              <option value="sfumato">Sfumato</option>
+              <option value="umbra">Umbra</option>
+            </select>
+          </label>
+
+          <button id="mode-toggle" class="button button-primary" type="button">
+            Toggle light / dark
+          </button>
+        </div>
+      </header>
+
+      <main class="layout-grid">
+        <section class="surface stack-lg">
+          <div class="section-heading">
+            <p class="eyebrow">Principles</p>
+            <h2>Built to feel cinematic without sacrificing clarity</h2>
+          </div>
+
+          <div class="card-grid">
+            <article class="card accent-card">
+              <h3>Adaptive color tokens</h3>
+              <p>
+                OKLCH-inspired token groupings make it straightforward to swap mood while preserving
+                readable contrast relationships.
+              </p>
+            </article>
+            <article class="card accent-card">
+              <h3>Container-aware composition</h3>
+              <p>
+                Components scale with layout density and viewport changes using flexible grid and
+                clamp-based sizing.
+              </p>
+            </article>
+            <article class="card accent-card">
+              <h3>Accessible defaults</h3>
+              <p>
+                Focus rings, touch-sized controls, semantic spacing, and strong hierarchy are on by
+                default rather than bolted on later.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="surface stack-lg">
+          <div class="section-heading">
+            <p class="eyebrow">Component preview</p>
+            <h2>Starter primitives</h2>
+          </div>
+
+          <div class="card-grid">
+            <article class="card">
+              <span class="pill">Buttons</span>
+              <h3>Action hierarchy</h3>
+              <p>Pair assertive primary actions with quieter secondary affordances.</p>
+              <div class="button-row">
+                <button class="button button-primary">Launch demo</button>
+                <button class="button button-secondary">View tokens</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="pill">Forms</span>
+              <h3>Readable inputs</h3>
+              <div class="stack-sm">
+                <label class="control-stack">
+                  <span>Email address</span>
+                  <input class="input" type="email" placeholder="name@example.com" />
+                </label>
+                <label class="control-stack">
+                  <span>Density</span>
+                  <select class="input">
+                    <option>Comfortable</option>
+                    <option>Compact</option>
+                    <option>Spacious</option>
+                  </select>
+                </label>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="pill">Status</span>
+              <h3>Progress with mood</h3>
+              <div class="metric">
+                <div>
+                  <strong>82%</strong>
+                  <span>Accessibility baseline</span>
+                </div>
+                <div class="meter" aria-hidden="true">
+                  <span></span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="surface stack-lg">
+          <div class="section-heading">
+            <p class="eyebrow">Tokens</p>
+            <h2>Theme palette snapshot</h2>
+          </div>
+          <div id="swatches" class="swatch-grid" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/playground.js"></script>
+  </body>
+</html>
